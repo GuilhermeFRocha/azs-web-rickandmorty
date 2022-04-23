@@ -1,0 +1,31 @@
+.content {
+  color: #16acc9;
+  border: 1px solid wheat;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  -webkit-text-stroke-width: 0.5px;
+  gap: 10px;
+  -webkit-text-stroke-color: #c8d24a;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 300px;
+  flex: 1;
+  box-shadow: 0px 0px 5px 2px #1d4c4d;
+  background: #000000e3;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}

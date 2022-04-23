@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Style from "./global.module.css";
+import Header from "./Components/Header";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+
+import { ApolloClient, InMemoryCache} from "@apollo/client";
+import PageEpisodes from "./screens/PageEpisodes";
+import EpisodeDetails from "./screens/EpisodeDetails";
+
+export const client = new ApolloClient({
+  uri: "https://rickandmortyapi.com/graphql",
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
+    <BrowserRouter>
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={Style.image}></div>
+      <Header />
+      <Routes>
+      <Route path="/" element={ <PageEpisodes />} />
+      <Route path="/:id" element={<EpisodeDetails/>} />
+
+     
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 

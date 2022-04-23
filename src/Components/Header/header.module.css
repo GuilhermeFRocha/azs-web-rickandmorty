@@ -1,0 +1,15 @@
+.logo {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.726);
+  position: relative;
+}
+
+.logo img {
+  width: 20%;
+  padding: 0 0px 25px 30px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
