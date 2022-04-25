@@ -24,14 +24,12 @@ function Header() {
 
   return (
     
-    <div className={Style.search}>
-      <div className={Style.logo} onClick= {handleClick}>
-      <img src={logo} alt="Logo"/>
+    <div className={Style.header}>
+      <div className={Style.logo} >
+      <img onClick= {handleClick} src={logo} alt="Logo"/>
       </div>
 
-      <div>
-        <input type="text" />
-      </div>
+      
     </div>
 
     

@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from './error.module.css'
 
-const Error = () => {
+function Error ()  {
   return (
     <div className={Style.background}>
 		<div className={Style.space} ></div>

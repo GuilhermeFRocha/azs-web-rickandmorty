@@ -1,6 +1,4 @@
-import {
-  gql,
-} from "@apollo/client"
+import { gql } from "@apollo/client";
 
 const GET_ALL_EPISODES = gql`
   query ($page: Int!) {
@@ -24,21 +22,23 @@ const GET_ALL_EPISODES = gql`
   }
 `;
 
-const GET_EPISODE_BY_ID = gql `
-query ($id: ID!) {
-episode (id: $id){
-  name
-  air_date
-  episode
-  
-  characters{
-    name
-    species
-    status
-    image
+const GET_EPISODE_BY_ID = gql`
+  query ($id: ID!) {
+    episode(id: $id) {
+      name
+      air_date
+      episode
+
+      characters {
+        name
+        species
+        status
+        image
+      }
+    }
   }
-}
-}
 `;
 
-export {GET_ALL_EPISODES,GET_EPISODE_BY_ID }
+
+
+export { GET_ALL_EPISODES, GET_EPISODE_BY_ID,  };

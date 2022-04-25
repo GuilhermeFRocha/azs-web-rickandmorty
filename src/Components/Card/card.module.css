@@ -10,7 +10,6 @@
   -webkit-text-stroke-color: #c8d24a;
   font-size: 16px;
   font-weight: 500;
-  min-width: 300px;
   flex: 1;
   box-shadow: 0px 0px 5px 2px #1d4c4d;
   background: #000000e3;
@@ -20,7 +19,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .data {
@@ -28,4 +27,14 @@
   align-items: center;
   position: relative;
   justify-content: space-between;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  gap: 20px;
+
+  justify-content: center;
 }

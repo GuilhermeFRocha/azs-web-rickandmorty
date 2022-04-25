@@ -19,7 +19,7 @@ function EpisodeDetails() {
   if (error) return <Error />;
 
   return (
-    <div>
+    <div style={{position:"relative"}}>
       <div className={Style.containerDesc}>
 
       <div key={data.episode.id} className={Style.desc}>
@@ -36,9 +36,9 @@ function EpisodeDetails() {
         <p>Date:</p>
         <p>{data.episode.air_date}</p>
       </div>
-
-        <p  className={Style.desc}>Characters:</p>
+        
       </div>
+        <p  className={Style.title}>Characters:</p>
 
       <div  className={Style.container}> 
         {data.episode.characters.map((item) => (

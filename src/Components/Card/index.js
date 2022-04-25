@@ -3,7 +3,7 @@ import Style from "../Card/card.module.css";
 import { useNavigate } from 'react-router-dom';
 
 
-const Card = ({ data }) => {
+function Card ({ data })  {
   
   const navigate = useNavigate();
 
@@ -29,7 +29,7 @@ const Card = ({ data }) => {
           <p>{item.air_date}</p>
         </span>
 
-        <span className={Style.person}>
+        <span className={Style.data}>
           <p>Number of characters:</p>
           <p>{item.characters.length}</p>
         </span>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from './button.module.css'
 
-const Button = ({children, ...rest}) => {
+function Button  ({children, ...rest})  {
   return (
       <button {...rest} className={Style.paginationButton}> 
         {children}

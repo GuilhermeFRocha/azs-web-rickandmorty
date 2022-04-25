@@ -1,45 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+
 .container {
   width: 80%;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
   gap: 20px;
+  justify-content: center;
 }
 
 .contentCard {
   color: #16acc9;
   border: 1px solid wheat;
   border-radius: 8px;
-  display: flex;
   flex-direction: column;
   -webkit-text-stroke-width: 0.5px;
   gap: 10px;
   -webkit-text-stroke-color: #c8d24a;
   font-size: 16px;
   font-weight: 500;
-  min-width: 300px;
-  flex: 1 1;
   box-shadow: 0px 0px 5px 2px #1d4c4d;
 }
 
 .containerDesc {
   width: 80%;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
 }
 
 .desc {
-  font-size: 50px;
-  font-family: horror;
-  padding: 50px 0;
-  background: #16acc9;
-  background: linear-gradient(to right, #16acc9 5%, #c6d04b 15%, #34a632 27%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: flex;
-  font-style: normal;
+  justify-content: center;
+  gap: 20px;
 }
 
 .desc p {
+  font-size: 30px;
+  font-family: "Neucha", cursive;
+  padding: 50px 0;
+  line-height: 1em;
+  color: #7dc290;
+  font-style: normal;
+}
+
+.title {
+  font-size: 50px;
+  font-family: horror;
+  padding: 50px 0;
+  background: linear-gradient(to right, #16acc9 43%, #c6d04b 50%, #34a632 54%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
 }
 
 .imgCard {
@@ -59,4 +72,19 @@
 
 .list li {
   padding: 10px 0;
+}
+
+@media screen and (min-width: 891px) and (max-width: 1380px) {
+  .desc:nth-child(3) {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 891px) {
+  .desc:nth-child(2) p {
+    padding: 0px;
+  }
 }
