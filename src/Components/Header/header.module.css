@@ -5,11 +5,3 @@
 .logo img {
   width: 100%;
 }
-
-.header {
-  width: 80%;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-}

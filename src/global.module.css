@@ -182,3 +182,11 @@ table {
   transition: all 0.2s;
   margin-top: 20px;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}

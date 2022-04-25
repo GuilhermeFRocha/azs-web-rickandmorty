@@ -1,0 +1,19 @@
+.contentInput {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.contentInput input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.contentInput button {
+  background-color: transparent;
+  color: #34a632;
+  padding: 0;
+  margin: 0;
+}
