@@ -1,0 +1,74 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  gap: 20px;
+  background-image: url(../../img/rick-and-morty-rick.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: horror;
+  padding: 50px;
+  background: #16acc9;
+  background: linear-gradient(to right, #16acc9 40%, #c6d04b 50%, #34a632 71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.whapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.episodes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonFav {
+  background-color: #16acc9;
+  font-family: "Neucha", cursive;
+  font-size: 16px;
+}
+
+.buttonFav:hover {
+  background-color: #34a632;
+  transition: all 0.3s;
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 30px;
+    padding: 35px 15px 35px 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, 300px);
+  }
+
+  .episodes {
+    display: grid;
+  }
+
+  .title {
+    padding: 25px 0;
+  }
+
+  .buttonFav {
+    margin: 0px 0 40px 0;
+  }
+}

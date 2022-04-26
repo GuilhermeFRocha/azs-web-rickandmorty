@@ -1,15 +1,17 @@
 import Card from "../../Components/Card";
 import Button from "../../Components/Button";
-import StyleCard from "../../global.module.css";
 import Load from "../../Components/Load/index";
 import Error from "../../Components/Error";
 import Style from "../../Components/Card/card.module.css";
+import Styles from './pageEpisodes.module.css'
 import { useQuery } from "@apollo/client";
 import { useState } from "react";
 import { GET_ALL_EPISODES } from "../../graphql/queries";
 
 function PageEpisodes({ searchParams }) {
   const [page, setPage] = useState(1);
+  const [ showFavourites, setShowFavourites ] = useState(false)
+
 
   const { loading, error, data } = useQuery(GET_ALL_EPISODES, {
     variables: {
@@ -30,7 +32,7 @@ function PageEpisodes({ searchParams }) {
       )
       .map((item) => (
         <>
-          <div key={item.id} className={Style.container}>
+          <div key={item.id} className={Styles.containerSearch}>
             <div className={Style.content}>
               <span key={item.id} className={Style.data}>
                 <p> Episode number:</p>
@@ -65,31 +67,37 @@ function PageEpisodes({ searchParams }) {
 
   return (
     <div>
-      <h1 className={StyleCard.title}>List of episodes</h1>
-
-      <div className={StyleCard.container}>
-        <Card data={data} />
+      <div className={Styles.episodes}>
+        <h1 className={Styles.title}>List of episodes</h1>
+        <button className={Styles.buttonFav} type="button" onClick={() => setShowFavourites(!showFavourites)}>{showFavourites ? 'Show all' : 'Show Favourites'}</button>
       </div>
 
-      <div className={StyleCard.whapper}>
-        <Button
-          type="button"
-          disabled={!prevEpisodes}
-          onClick={() => setPage(page - 1)}
-          style={{ position: "relative" }}
-        >
-          prev
-        </Button>
 
-        <Button
-          type="button"
-          disabled={!nextEpisodes}
-          onClick={() => setPage(page + 1)}
-          style={{ position: "relative" }}
-        >
-          next
-        </Button>
+      <div className={Styles.container}>
+        <Card data={data} showFavourites={showFavourites} />
       </div>
+
+      {!showFavourites && (
+        <div className={Styles.whapper}>
+          <Button
+            type="button"
+            disabled={!prevEpisodes}
+            onClick={() => setPage(page - 1)}
+            style={{ position: "relative" }}
+          >
+            prev
+          </Button>
+
+          <Button
+            type="button"
+            disabled={!nextEpisodes}
+            onClick={() => setPage(page + 1)}
+            style={{ position: "relative" }}
+          >
+            next
+          </Button>
+        </div>
+     )}
       {filtred}
     </div>
   );
