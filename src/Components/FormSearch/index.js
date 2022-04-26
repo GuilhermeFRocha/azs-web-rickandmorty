@@ -1,7 +1,15 @@
 import React from "react";
 import Style from "./formSearch.module.css";
+import { useLocation } from "react-router-dom";
+
+
+
 
 function FormSearch({ setSearchParams, searchParams }) {
+  const location = useLocation()
+  const path = location.pathname
+
+
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <div className={Style.contentInput}>
@@ -10,6 +18,7 @@ function FormSearch({ setSearchParams, searchParams }) {
           value={searchParams}
           onChange={(e) => setSearchParams(e.target.value)}
           placeholder="Search"
+          disabled={path !== '/'}
         />
         {searchParams.length ? (
           <button type="button" onClick={() => setSearchParams("")}>

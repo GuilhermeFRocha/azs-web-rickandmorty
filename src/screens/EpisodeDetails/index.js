@@ -6,6 +6,8 @@ import Load from "../../Components/Load";
 import Error from "../../Components/Error";
 import Style from "./episodeDetails.module.css";
 
+
+
 function EpisodeDetails() {
   const location = useLocation();
   const id = location.pathname.replace("/", "");
@@ -17,6 +19,8 @@ function EpisodeDetails() {
 
   if (loading) return <Load />;
   if (error) return <Error />;
+
+ 
 
   return (
     <div style={{position:"relative"}}>
