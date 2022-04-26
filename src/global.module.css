@@ -144,7 +144,7 @@ table {
   display: grid;
   grid-template-columns: repeat(auto-fit, 350px);
   gap: 20px;
-  background-image: url(./img/645c8d877f6e2aad7fa6545140c72a52.gif);
+  background-image: url(./img/rick-and-morty-rick.gif);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -189,4 +189,19 @@ table {
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, 300px);
+  }
 }

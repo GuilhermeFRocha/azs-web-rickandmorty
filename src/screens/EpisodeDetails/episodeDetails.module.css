@@ -77,9 +77,13 @@
 @media screen and (min-width: 891px) and (max-width: 1380px) {
   .desc:nth-child(3) {
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 0;
     right: 0;
+  }
+
+  .title {
+    padding: 80px 0;
   }
 }
 

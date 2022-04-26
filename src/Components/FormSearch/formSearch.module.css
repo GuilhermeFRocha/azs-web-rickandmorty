@@ -3,12 +3,24 @@
   align-items: center;
   border-radius: 8px;
   background-color: #fff;
+  width: 250px;
+  justify-content: space-around;
+  padding: 5px 0;
 }
 
 .contentInput input {
   background-color: transparent;
   border: none;
   outline: none;
+  font-size: 25px;
+  font-family: "Neucha", cursive;
+
+  color: #16acc9;
+  font-style: bold;
+}
+
+.contentInput input::placeholder {
+  color: #16acc9;
 }
 
 .contentInput button {
@@ -16,4 +28,5 @@
   color: #34a632;
   padding: 0;
   margin: 0;
+  font-size: 19px;
 }
