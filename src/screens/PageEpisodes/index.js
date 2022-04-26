@@ -32,7 +32,7 @@ function PageEpisodes({ searchParams }) {
       )
       .map((item) => (
         <>
-          <div key={item.id} className={Styles.containerSearch}>
+          <div key={item.id} className={Style.container}>
             <div className={Style.content}>
               <span key={item.id} className={Style.data}>
                 <p> Episode number:</p>
